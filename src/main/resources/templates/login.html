@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Please login</title>
+</head>
+<body>
+<h1>Please login</h1>
+<h2 th:text="${app.name} + ' wants to connect.'">Some app wants to connect.</h2>
+<form action="?" method="POST">
+<input type="hidden" name="client_id" th:value="${client_id}"/>
+<input type="hidden" name="state" th:value="${state}"/>
+<input type="hidden" name="scope" th:value="${scope}"/>
+<input type="hidden" name="redirect_uri" th:value="${redirect_uri}"/>
+<input type="text" name="username" placeholder="username"/>
+<input type="password" name="password" placeholder="password"/>
+<input type="submit" value="Login"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Oops, there was a problem</title>
+	</head>
+	<body>
+		<h1>Oops, there was a problem</h1>
+		<h2 th:text="${message}">The server blew up.</h2>
+		<p th:text="${eventId}"><i>00000000-0000-0000-0000-000000000000</i></p>
+		<p th:text="${occuredAt}"><i>2021-08-30T20:30:40Z</i></p>
+	</body>
+</html>
