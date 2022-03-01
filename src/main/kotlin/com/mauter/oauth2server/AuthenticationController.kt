@@ -29,7 +29,6 @@ class AuthenticationController(
     val appRepository: AppRepository,
     val userRepository: UserRepository,
     val authCodeRepository: AuthCodeRepository,
-    val crypter: Crypter,
     val tokenFactory: TokenFactory,
     val certificate: Certificate
 ) {
@@ -96,7 +95,7 @@ class AuthenticationController(
             throw UnauthorizedException("Invalid credentials.")
         }
 
-        val app = appRepository.findByClientIdAndRedirectUri(clientId, redirectUri)
+        appRepository.findByClientIdAndRedirectUri(clientId, redirectUri)
             ?: throw BadInputException("Invalid client.")
 
         val user = userRepository.findByUsername(username)
@@ -153,7 +152,7 @@ class AuthenticationController(
             throw BadInputException("Invalid redirect URI.")
         }
 
-        val app = appRepository.findByClientIdAndRedirectUri(clientId, redirectUri)
+        appRepository.findByClientIdAndRedirectUri(clientId, redirectUri)
             ?: throw BadInputException("Invalid client.")
 
         val authCode = authCodeRepository.findByCodeAndClientIdAndRedirectUri(code, clientId, redirectUri)
