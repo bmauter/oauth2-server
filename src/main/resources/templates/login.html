@@ -2,70 +2,70 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <title>Brian Auth - Please sign in</title>
     <style>
-html,
-body {
-  height: 100%;
-}
+        html,
+        body {
+            height: 100%;
+        }
 
-body {
-  display: flex;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-}
+        body {
+            display: flex;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
 
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-}
+        .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+        }
 
-.form-signin .checkbox {
-  font-weight: 400;
-}
+        .form-signin .checkbox {
+            font-weight: 400;
+        }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
+        .form-signin .form-floating:focus-within {
+            z-index: 2;
+        }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
 
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-</style>
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
 </head>
 
 <body class="text-center">
 <main class="form-signin">
     <form action="?" method="POST">
-        <input type="hidden" name="client_id" th:value="${client_id}"/>
-        <input type="hidden" name="state" th:value="${state}"/>
-        <input type="hidden" name="scope" th:value="${scope}"/>
-        <input type="hidden" name="redirect_uri" th:value="${redirect_uri}"/>
+        <input name="client_id" th:value="${client_id}" type="hidden"/>
+        <input name="state" th:value="${state}" type="hidden"/>
+        <input name="scope" th:value="${scope}" type="hidden"/>
+        <input name="redirect_uri" th:value="${redirect_uri}" type="hidden"/>
 
-        <img class="mb-4" src="/images/logo.svg" alt="" width="221" height="150">
+        <img alt="" class="mb-4" height="150" src="/images/logo.svg" width="221">
         <h1 th:text="${app.name} + ' wants to connect.'">Some app wants to connect.</h1>
         <h2 class="h3 mb-3 fw-normal">Please sign in</h2>
 
         <div class="form-floating">
-            <input type="text" name="username" class="form-control" id="floatingInput" placeholder="username">
+            <input class="form-control" id="floatingInput" name="username" placeholder="username" type="text">
             <label for="floatingInput">Username</label>
         </div>
         <div class="form-floating">
-            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="password">
+            <input class="form-control" id="floatingPassword" name="password" placeholder="password" type="password">
             <label for="floatingPassword">Password</label>
         </div>
 

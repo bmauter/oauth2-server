@@ -1,12 +1,6 @@
 package com.mauter.oauth2server
 
-import io.jsonwebtoken.Claims
-import io.jsonwebtoken.JwsHeader
-import io.jsonwebtoken.JwtParser
-import io.jsonwebtoken.Jwts
-import io.jsonwebtoken.SignatureAlgorithm
-import io.jsonwebtoken.SigningKeyResolverAdapter
-import io.jsonwebtoken.UnsupportedJwtException
+import io.jsonwebtoken.*
 import io.jsonwebtoken.impl.DefaultJwsHeader
 import java.math.BigInteger
 import java.security.Key
@@ -16,7 +10,7 @@ import java.security.PublicKey
 import java.security.interfaces.RSAKey
 import java.security.interfaces.RSAPrivateKey
 import java.security.interfaces.RSAPublicKey
-import java.util.Date
+import java.util.*
 import java.util.function.Function
 
 const val TOKEN_TYPE = "JWT"
@@ -32,7 +26,8 @@ class TokenFactory(val privateKey: PrivateKey? = null, vararg publicKeys: Public
                 .associateBy { keyId(it) }
 
             override fun resolveSigningKey(header: JwsHeader<*>?, claims: Claims?): Key {
-                return publicKeyMap[header?.keyId] ?: throw UnsupportedJwtException("Unable to resolve signing key for kid ${header?.keyId}.")
+                return publicKeyMap[header?.keyId]
+                    ?: throw UnsupportedJwtException("Unable to resolve signing key for kid ${header?.keyId}.")
             }
         }
 
@@ -41,13 +36,13 @@ class TokenFactory(val privateKey: PrivateKey? = null, vararg publicKeys: Public
             .setSigningKeyResolver(resolver)
     }
 
-
     fun getSubjectFromToken(token: String) = getClaimFromToken(token, Claims.SUBJECT)
     fun getIssuedAtDateFromToken(token: String) = getClaimFromToken(token, Claims.ISSUED_AT)
     fun getExpirationDateFromToken(token: String) = getClaimFromToken(token, Claims.EXPIRATION)
 
     fun getClaimFromToken(token: String?, key: String?): String? = parse(token).get(key, String::class.java)
-    fun <T> getClaimFromToken(token: String?, claimsResolver: Function<Claims, T>): T = claimsResolver.apply(parse(token))
+    fun <T> getClaimFromToken(token: String?, claimsResolver: Function<Claims, T>): T =
+        claimsResolver.apply(parse(token))
 
     fun parse(token: String?): Claims = parser.parseClaimsJwt(token).body
 
@@ -71,12 +66,10 @@ class TokenFactory(val privateKey: PrivateKey? = null, vararg publicKeys: Public
             .compact()
     }
 
-
     fun keyId(key: RSAKey): String {
         val md = MessageDigest.getInstance("SHA-1")
         val messageDigest = md.digest(key.modulus.toByteArray())
         val no = BigInteger(1, messageDigest)
         return no.toString(16)
     }
-
 }

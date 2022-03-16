@@ -20,9 +20,7 @@ import java.security.GeneralSecurityException
 import java.security.cert.Certificate
 import java.security.cert.CertificateEncodingException
 import java.time.Instant
-import java.util.Base64
-import java.util.UUID
-
+import java.util.*
 
 @Controller
 class AuthenticationController(
@@ -42,8 +40,10 @@ class AuthenticationController(
         @RequestParam(name = "scope", required = false) scope: String?,
         @RequestParam(name = "state", required = false) state: String?
     ): ModelAndView {
-        log.debug("showLogin: responseType={}, clientId={}, redirectUri={}, scope={}, state={}",
-            responseType, clientId, redirectUri, scope, state)
+        log.debug(
+            "showLogin: responseType={}, clientId={}, redirectUri={}, scope={}, state={}",
+            responseType, clientId, redirectUri, scope, state
+        )
 
         if ("code" != responseType) {
             throw BadInputException("Invalid response type.")
@@ -68,7 +68,6 @@ class AuthenticationController(
         return mav
     }
 
-
     @PostMapping("/login/oauth/authorize")
     @Throws(GeneralSecurityException::class, UnsupportedEncodingException::class)
     fun login(
@@ -79,8 +78,10 @@ class AuthenticationController(
         @RequestParam(name = "scope", required = false) scope: String?,
         @RequestParam(name = "state", required = false) state: String?
     ): ResponseEntity<Void> {
-        log.debug("login: clientId={}, redirectUri={}, username={}, password={}, scope={}, state={}",
-            clientId, redirectUri, username, password, scope, state)
+        log.debug(
+            "login: clientId={}, redirectUri={}, username={}, password={}, scope={}, state={}",
+            clientId, redirectUri, username, password, scope, state
+        )
 
         if (clientId.isEmpty()) {
             throw BadInputException("Invalid client.")
@@ -108,13 +109,15 @@ class AuthenticationController(
         // make an authorization code and redirect them back.
         val code = UUID.randomUUID().toString().replace("-", "")
 
-        authCodeRepository.save(AuthCode(
-            code = code,
-            clientId = clientId,
-            redirectUri = redirectUri,
-            expiration = Instant.now().plusSeconds(300),
-            user = user
-        ))
+        authCodeRepository.save(
+            AuthCode(
+                code = code,
+                clientId = clientId,
+                redirectUri = redirectUri,
+                expiration = Instant.now().plusSeconds(300),
+                user = user
+            )
+        )
 
         val url = StringBuilder(redirectUri)
         url.append("?code=").append(URLEncoder.encode(code, "UTF-8"))
@@ -126,7 +129,6 @@ class AuthenticationController(
             .build()
     }
 
-
     @PostMapping("/login/oauth/token")
     @Throws(GeneralSecurityException::class, JsonProcessingException::class)
     fun getToken(
@@ -136,8 +138,10 @@ class AuthenticationController(
         @RequestParam("client_secret") clientSecret: String,
         @RequestParam("redirect_uri") redirectUri: String
     ): ResponseEntity<String> {
-        log.debug( "getToken: grantType={}, code={}, clientId={}, clientSecret={}, redirectUri={}",
-            grantType, code, clientId, clientSecret, redirectUri)
+        log.debug(
+            "getToken: grantType={}, code={}, clientId={}, clientSecret={}, redirectUri={}",
+            grantType, code, clientId, clientSecret, redirectUri
+        )
 
         if (grantType.isEmpty()) {
             throw BadInputException("Invalid grant type.")
@@ -184,7 +188,6 @@ class AuthenticationController(
             .body(json)
     }
 
-
     @GetMapping("/login/oauth/cert")
     @Throws(CertificateEncodingException::class)
     fun getPemCert(): ResponseEntity<String> {
@@ -194,7 +197,7 @@ class AuthenticationController(
         val encoder = Base64.getMimeEncoder(64, lineSeparator.toByteArray())
         val rawCrtText: ByteArray = certificate.encoded
         val encodedCertText = String(encoder.encode(rawCrtText))
-        val pretty = "${beginCert}${lineSeparator}${encodedCertText}${lineSeparator}${endCert}"
+        val pretty = "${beginCert}${lineSeparator}${encodedCertText}${lineSeparator}$endCert"
         return ResponseEntity.ok()
             .contentType(MediaType.parseMediaType("application/pem-certificate-chain"))
             .header(HttpHeaders.CONTENT_DISPOSITION, "filename=\"cert.pem\"")

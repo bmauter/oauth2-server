@@ -1,140 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="logo.svg"
-   inkscape:version="1.0 (4035a4f, 2020-05-01)"
-   id="svg8"
-   version="1.1"
-   viewBox="0 0 253.20013 172.1097"
-   height="172.1097mm"
-   width="253.20013mm">
-  <defs
-     id="defs2">
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath44">
-      <path
-         d="M 0,566 H 800 V 0 H 0 Z"
-         id="path42" />
-    </clipPath>
-  </defs>
-  <sodipodi:namedview
-     inkscape:window-maximized="0"
-     inkscape:window-y="23"
-     inkscape:window-x="0"
-     inkscape:window-height="1174"
-     inkscape:window-width="1252"
-     fit-margin-bottom="20"
-     fit-margin-right="20"
-     fit-margin-left="20"
-     fit-margin-top="20"
-     showgrid="false"
-     inkscape:document-rotation="0"
-     inkscape:current-layer="layer1"
-     inkscape:document-units="mm"
-     inkscape:cy="599.5324"
-     inkscape:cx="517.54703"
-     inkscape:zoom="0.35"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     borderopacity="1.0"
-     bordercolor="#666666"
-     pagecolor="#ffffff"
-     id="base" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     transform="translate(5.3986031,10.459614)"
-     id="layer1"
-     inkscape:groupmode="layer"
-     inkscape:label="Layer 1">
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        xmlns="http://www.w3.org/2000/svg"
+        sodipodi:docname="logo.svg"
+        inkscape:version="1.0 (4035a4f, 2020-05-01)"
+        id="svg8"
+        version="1.1"
+        viewBox="0 0 253.20013 172.1097"
+        height="172.1097mm"
+        width="253.20013mm">
+    <defs
+            id="defs2">
+        <clipPath
+                clipPathUnits="userSpaceOnUse"
+                id="clipPath44">
+            <path
+                    d="M 0,566 H 800 V 0 H 0 Z"
+                    id="path42"/>
+        </clipPath>
+    </defs>
+    <sodipodi:namedview
+            inkscape:window-maximized="0"
+            inkscape:window-y="23"
+            inkscape:window-x="0"
+            inkscape:window-height="1174"
+            inkscape:window-width="1252"
+            fit-margin-bottom="20"
+            fit-margin-right="20"
+            fit-margin-left="20"
+            fit-margin-top="20"
+            showgrid="false"
+            inkscape:document-rotation="0"
+            inkscape:current-layer="layer1"
+            inkscape:document-units="mm"
+            inkscape:cy="599.5324"
+            inkscape:cx="517.54703"
+            inkscape:zoom="0.35"
+            inkscape:pageshadow="2"
+            inkscape:pageopacity="0.0"
+            borderopacity="1.0"
+            bordercolor="#666666"
+            pagecolor="#ffffff"
+            id="base"/>
+    <metadata
+            id="metadata5">
+        <rdf:RDF>
+            <cc:Work
+                    rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type
+                        rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+                <dc:title></dc:title>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
     <g
-       id="g134">
-      <g
-         transform="matrix(0.35277777,0,0,-0.35277777,-78.970296,175.54875)"
-         clip-path="url(#clipPath44)"
-         id="g40">
+            transform="translate(5.3986031,10.459614)"
+            id="layer1"
+            inkscape:groupmode="layer"
+            inkscape:label="Layer 1">
         <g
-           transform="translate(399.5674,443.9189)"
-           id="g46">
-          <path
-             id="path48"
-             style="fill:#c8c7c3;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             d="m 0,0 c -43.951,0 -79.706,-35.756 -79.706,-79.706 v -61.402 c 0,-43.952 35.755,-79.708 79.706,-79.708 43.951,0 79.705,35.756 79.705,79.708 v 61.402 C 79.705,-35.756 43.951,0 0,0 m 0,-247.473 c -58.648,0 -106.361,47.715 -106.361,106.365 v 61.402 c 0,58.648 47.713,106.362 106.361,106.362 58.647,0 106.361,-47.714 106.361,-106.362 v -61.402 c 0,-58.65 -47.714,-106.365 -106.361,-106.365" />
-        </g>
-        <g
-           transform="translate(493.5176,364.6055)"
-           id="g50">
-          <path
-             id="path52"
-             style="fill:#e2e1de;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             d="m 0,0 c -0.883,-72.122 1.177,-73.565 1.177,-73.565 l 10.652,0.655 c 0.381,3.655 0.582,7.362 0.582,11.115 v 61.403 c 0,58.648 -47.714,106.361 -106.361,106.361 0,0 95.127,-9.93 93.95,-105.969" />
-        </g>
-        <g
-           transform="translate(319.8618,302.8105)"
-           id="g54">
-          <path
-             id="path56"
-             style="fill:#a8a7a7;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             d="m 0,0 v 61.403 c 0,43.95 35.754,79.705 79.706,79.705 0,0 -86.238,6.534 -86.238,-82.841 V -7.589 L 0.374,-7.654 C 0.133,-5.134 0,-2.583 0,0" />
-        </g>
-        <g
-           transform="translate(533.8916,118.043)"
-           id="g58">
-          <path
-             id="path60"
-             style="fill:#fec514;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             d="m 0,0 c 0,-12.125 -9.829,-21.952 -21.951,-21.952 h -224.746 c -12.123,0 -21.952,9.827 -21.952,21.952 v 165.162 c 0,12.124 9.829,21.952 21.952,21.952 H -21.951 C -9.829,187.114 0,177.286 0,165.162 Z" />
-        </g>
-        <g
-           transform="translate(511.9404,305.1567)"
-           id="g62">
-          <path
-             id="path64"
-             style="fill:#ecac15;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             d="M 0,0 H -112.894 V -209.066 H 0 c 12.122,0 21.951,9.827 21.951,21.952 V -21.952 C 21.951,-9.828 12.122,0 0,0" />
-        </g>
-        <g
-           transform="translate(423.8955,207.4424)"
-           id="g66">
-          <path
-             id="path68"
-             style="fill:#152f30;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             d="m 0,0 c 0,13.438 -10.894,24.328 -24.328,24.328 -13.435,0 -24.328,-10.89 -24.328,-24.328 0,-10.333 6.462,-19.098 15.543,-22.63 v -28.503 c 0,-4.849 3.935,-8.784 8.785,-8.784 4.849,0 8.784,3.935 8.784,8.784 V -22.63 C -6.463,-19.098 0,-10.333 0,0" />
-        </g>
-      </g>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:50.8px;line-height:0.75;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="117.17262"
-         y="74.072678"
-         id="text114"><tspan
+                id="g134">
+            <g
+                    transform="matrix(0.35277777,0,0,-0.35277777,-78.970296,175.54875)"
+                    clip-path="url(#clipPath44)"
+                    id="g40">
+                <g
+                        transform="translate(399.5674,443.9189)"
+                        id="g46">
+                    <path
+                            id="path48"
+                            style="fill:#c8c7c3;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                            d="m 0,0 c -43.951,0 -79.706,-35.756 -79.706,-79.706 v -61.402 c 0,-43.952 35.755,-79.708 79.706,-79.708 43.951,0 79.705,35.756 79.705,79.708 v 61.402 C 79.705,-35.756 43.951,0 0,0 m 0,-247.473 c -58.648,0 -106.361,47.715 -106.361,106.365 v 61.402 c 0,58.648 47.713,106.362 106.361,106.362 58.647,0 106.361,-47.714 106.361,-106.362 v -61.402 c 0,-58.65 -47.714,-106.365 -106.361,-106.365"/>
+                </g>
+                <g
+                        transform="translate(493.5176,364.6055)"
+                        id="g50">
+                    <path
+                            id="path52"
+                            style="fill:#e2e1de;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                            d="m 0,0 c -0.883,-72.122 1.177,-73.565 1.177,-73.565 l 10.652,0.655 c 0.381,3.655 0.582,7.362 0.582,11.115 v 61.403 c 0,58.648 -47.714,106.361 -106.361,106.361 0,0 95.127,-9.93 93.95,-105.969"/>
+                </g>
+                <g
+                        transform="translate(319.8618,302.8105)"
+                        id="g54">
+                    <path
+                            id="path56"
+                            style="fill:#a8a7a7;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                            d="m 0,0 v 61.403 c 0,43.95 35.754,79.705 79.706,79.705 0,0 -86.238,6.534 -86.238,-82.841 V -7.589 L 0.374,-7.654 C 0.133,-5.134 0,-2.583 0,0"/>
+                </g>
+                <g
+                        transform="translate(533.8916,118.043)"
+                        id="g58">
+                    <path
+                            id="path60"
+                            style="fill:#fec514;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                            d="m 0,0 c 0,-12.125 -9.829,-21.952 -21.951,-21.952 h -224.746 c -12.123,0 -21.952,9.827 -21.952,21.952 v 165.162 c 0,12.124 9.829,21.952 21.952,21.952 H -21.951 C -9.829,187.114 0,177.286 0,165.162 Z"/>
+                </g>
+                <g
+                        transform="translate(511.9404,305.1567)"
+                        id="g62">
+                    <path
+                            id="path64"
+                            style="fill:#ecac15;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                            d="M 0,0 H -112.894 V -209.066 H 0 c 12.122,0 21.951,9.827 21.951,21.952 V -21.952 C 21.951,-9.828 12.122,0 0,0"/>
+                </g>
+                <g
+                        transform="translate(423.8955,207.4424)"
+                        id="g66">
+                    <path
+                            id="path68"
+                            style="fill:#152f30;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                            d="m 0,0 c 0,13.438 -10.894,24.328 -24.328,24.328 -13.435,0 -24.328,-10.89 -24.328,-24.328 0,-10.333 6.462,-19.098 15.543,-22.63 v -28.503 c 0,-4.849 3.935,-8.784 8.785,-8.784 4.849,0 8.784,3.935 8.784,8.784 V -22.63 C -6.463,-19.098 0,-10.333 0,0"/>
+                </g>
+            </g>
+            <text
+                    xml:space="preserve"
+                    style="font-style:normal;font-weight:normal;font-size:50.8px;line-height:0.75;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                    x="117.17262"
+                    y="74.072678"
+                    id="text114"><tspan
            sodipodi:role="line"
            id="tspan112"
            x="117.17262"
            y="74.072678"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Impact;-inkscape-font-specification:Impact;stroke-width:0.264583">Brian</tspan><tspan
-           sodipodi:role="line"
-           x="117.17262"
-           y="116.68127"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Impact;-inkscape-font-specification:Impact;stroke-width:0.264583"
-           id="tspan116">Auth</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Impact;-inkscape-font-specification:Impact;stroke-width:0.264583">Brian</tspan>
+                <tspan
+                        sodipodi:role="line"
+                        x="117.17262"
+                        y="116.68127"
+                        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:Impact;-inkscape-font-specification:Impact;stroke-width:0.264583"
+                        id="tspan116">Auth</tspan></text>
+        </g>
     </g>
-  </g>
 </svg>

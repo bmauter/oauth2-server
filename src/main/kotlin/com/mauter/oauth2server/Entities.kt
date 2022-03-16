@@ -1,72 +1,110 @@
 package com.mauter.oauth2server
 
-import org.hibernate.annotations.GenericGenerator
 import java.time.Instant
+import java.util.UUID
 import javax.persistence.Column
 import javax.persistence.Entity
-import javax.persistence.GeneratedValue
 import javax.persistence.Id
 import javax.persistence.JoinColumn
 import javax.persistence.ManyToOne
 import javax.persistence.MappedSuperclass
+import javax.persistence.Version
 
 @Entity
-open class User (
+class User(
     @Column(length = 20, nullable = false)
-    var username: String,
+    val username: String,
 
     @Column(length = 60, nullable = false)
-    var password: String,
+    val password: String,
 
     @Column(length = 50, nullable = false)
-    var firstName: String,
+    val firstName: String,
 
     @Column(length = 50, nullable = false)
-    var lastName: String,
+    val lastName: String,
 
     @Column(length = 150, nullable = false)
-    var email: String,
-) : UUIDKeyedObject(null)
+    val email: String,
+
+    id: UUID = UUID.randomUUID(),
+    version: Long? = null
+
+) : AbstractBaseEntity(id, version) {
+
+    fun copy(username: String?, password: String?, firstName: String?, lastName: String?, email: String?, id: UUID? = null, version: Long? = null): User {
+        return User(
+            username = username ?: this.username,
+            password = password ?: this.password,
+            firstName = firstName ?: this.firstName,
+            lastName = lastName ?: this.lastName,
+            email = email ?: this.email,
+            id = id ?: this.id,
+            version = version ?: this.version
+        )
+    }
+}
 
 @Entity
-open class App (
+class App(
     @Column(length = 100, nullable = false)
-    var name: String,
+    val name: String,
 
     @Column(length = 100, nullable = false)
-    var clientId: String,
+    val clientId: String,
 
     @Column(length = 100, nullable = false)
-    var clientSecret: String,
+    val clientSecret: String,
 
     @Column(length = 1000, nullable = false)
-    var redirectUri: String
-) : UUIDKeyedObject(null)
+    val redirectUri: String,
+
+    id: UUID = UUID.randomUUID(),
+    version: Long? = null
+
+) : AbstractBaseEntity(id, version)
 
 @Entity
-open class AuthCode (
+class AuthCode(
     @Column(length = 2000, nullable = false)
-    var code: String,
+    val code: String,
 
     @Column(length = 100, nullable = false)
-    var clientId: String,
+    val clientId: String,
 
     @Column(length = 1000, nullable = false)
-    var redirectUri: String,
+    val redirectUri: String,
 
     @Column(nullable = false)
-    var expiration: Instant,
+    val expiration: Instant,
 
     @ManyToOne
     @JoinColumn(name = "userId")
-    var user: User
-) : UUIDKeyedObject(null)
+    val user: User,
+
+    id: UUID = UUID.randomUUID(),
+    version: Long? = null
+
+) : AbstractBaseEntity(id, version)
 
 @MappedSuperclass
-open class UUIDKeyedObject (
+abstract class AbstractBaseEntity(
     @Id
-    @GeneratedValue(generator="UUID")
-    @GenericGenerator(name="UUID", strategy="org.hibernate.id.UUIDGenerator")
-    @Column(columnDefinition = "CHAR(36)")
-    var id: String? = null
-)
+    @Column(name = "id", length = 16, unique = true, nullable = false)
+    val id: UUID = UUID.randomUUID(),
+
+    @Version
+    val version: Long? = null
+
+) {
+    override fun hashCode(): Int {
+        return id.hashCode()
+    }
+
+    override fun equals(other: Any?) = when {
+        this === other -> true
+        other == null -> false
+        other !is AbstractBaseEntity -> false
+        else -> id == other.id
+    }
+}

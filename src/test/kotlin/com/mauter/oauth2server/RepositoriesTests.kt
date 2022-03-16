@@ -12,7 +12,8 @@ class RepositoriesTests @Autowired constructor(
     val entityManager: TestEntityManager,
     val userRepository: UserRepository,
     val appRepository: AppRepository,
-    val authCodeRepository: AuthCodeRepository) {
+    val authCodeRepository: AuthCodeRepository
+) {
 
     @Test
     fun `When findByUsername then return User`() {
@@ -26,7 +27,7 @@ class RepositoriesTests @Autowired constructor(
 
     @Test
     fun `When findByClientId then return App`() {
-        val expected = App("theapp", "clientId", "clientSecret", redirectUri="http://example.com/app")
+        val expected = App("theapp", "clientId", "clientSecret", redirectUri = "http://example.com/app")
         entityManager.persist(expected)
         entityManager.flush()
 
@@ -36,7 +37,7 @@ class RepositoriesTests @Autowired constructor(
 
     @Test
     fun `When findByClientIdAndRedirectUri then return App`() {
-        val expected = App("theapp", "clientId", "clientSecret", redirectUri="http://example.com/app")
+        val expected = App("theapp", "clientId", "clientSecret", redirectUri = "http://example.com/app")
         entityManager.persist(expected)
         entityManager.flush()
 
@@ -53,8 +54,11 @@ class RepositoriesTests @Autowired constructor(
         entityManager.persist(expected)
         entityManager.flush()
 
-        val actual = authCodeRepository.findByCodeAndClientIdAndRedirectUri(expected.code, expected.clientId, expected.redirectUri)
+        val actual = authCodeRepository.findByCodeAndClientIdAndRedirectUri(
+            expected.code,
+            expected.clientId,
+            expected.redirectUri
+        )
         assertThat(actual).isEqualTo(expected)
     }
-
 }
