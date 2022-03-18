@@ -13,7 +13,7 @@ abstract class AbstractControllerTest(body: StringSpec.() -> Unit = {}) : String
     @Autowired
     protected lateinit var mockMvc: MockMvc
 
-    protected lateinit var mapper: ObjectMapper
+    protected val mapper: ObjectMapper
 
     init {
         extension(SpringExtension)
